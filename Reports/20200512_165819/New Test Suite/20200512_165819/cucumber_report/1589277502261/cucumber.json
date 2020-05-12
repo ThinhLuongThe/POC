@@ -1,0 +1,74 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4891415400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setupScenario()"
+            }
+          }
+        ],
+        "line": 6,
+        "name": "Create a Corporate",
+        "description": "",
+        "id": "as-an-end-user;create-a-corporate",
+        "after": [
+          {
+            "result": {
+              "duration": 618614800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.teardownScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 8155282700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "This user can access Operations page",
+            "match": {
+              "location": "CreateCorporate.access_Operations_page()"
+            },
+            "keyword": "Given "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CreateCorporate"
+          },
+          {
+            "name": "@Create"
+          }
+        ]
+      }
+    ],
+    "name": "As an End User",
+    "description": "  I want to create a Corporate information",
+    "id": "as-an-end-user",
+    "keyword": "Feature",
+    "uri": "C:/Users/thinh.luong/Katalon Studio/automationPOC/Include/features/Corporate/CreateCorporate.feature",
+    "tags": [
+      {
+        "name": "@CreateCorporate",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

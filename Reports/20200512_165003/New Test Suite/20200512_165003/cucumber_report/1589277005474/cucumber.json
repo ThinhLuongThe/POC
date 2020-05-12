@@ -1,0 +1,75 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4630959900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setupScenario()"
+            }
+          }
+        ],
+        "line": 6,
+        "name": "Create a Corporate",
+        "description": "",
+        "id": "as-an-end-user;create-a-corporate",
+        "after": [
+          {
+            "result": {
+              "duration": 635291800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.teardownScenario()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "error_message": "java.lang.ClassNotFoundException: Object Repository/LoginPage\r\n\tat java.net.URLClassLoader.findClass(URLClassLoader.java:381)\r\n\tat java.lang.ClassLoader.loadClass(ClassLoader.java:424)\r\n\tat sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)\r\n\tat java.lang.ClassLoader.loadClass(ClassLoader.java:357)\r\n\tat java_lang_ClassLoader$loadClass.call(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)\r\n\tat base.BaseSteps.getPageObjectImplementation(BaseSteps.groovy:18)\r\n\tat base.BaseSteps.getPageObject(BaseSteps.groovy:26)\r\n\tat base.BaseSteps.getILoginPageObject(BaseSteps.groovy:33)\r\n\tat base.BaseSteps$getILoginPageObject.callCurrent(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:52)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:154)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:158)\r\n\tat stepDefinitions.CreateCorporate.access_Operations_page(CreateCorporate.groovy:14)\r\n\tat ✽.This user can access Operations page(C:/Users/thinh.luong/Katalon Studio/automationPOC/Include/features/Corporate/CreateCorporate.feature:7)\r\n",
+              "duration": 3559181700,
+              "status": "failed"
+            },
+            "line": 7,
+            "name": "This user can access Operations page",
+            "match": {
+              "location": "CreateCorporate.access_Operations_page()"
+            },
+            "keyword": "Given "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CreateCorporate"
+          },
+          {
+            "name": "@Create"
+          }
+        ]
+      }
+    ],
+    "name": "As an End User",
+    "description": "  I want to create a Corporate information",
+    "id": "as-an-end-user",
+    "keyword": "Feature",
+    "uri": "C:/Users/thinh.luong/Katalon Studio/automationPOC/Include/features/Corporate/CreateCorporate.feature",
+    "tags": [
+      {
+        "name": "@CreateCorporate",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

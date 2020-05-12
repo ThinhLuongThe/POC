@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="New Test Suite" time="15.158" tests="1" failures="0" errors="0">
+   <testsuite name="New Test Suite" tests="1" failures="0" errors="0" time="15.158" timestamp="2020-05-12 16:58:21" hostname="thinh.luong - lapdell-052.pyco.vn" id="Test Suites/New Test Suite">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="C:\\Users\\thinh.luong\\Katalon Studio\\automationPOC\\Reports\\20200512_165819\\New Test Suite\\20200512_165819"/>
+         <property name="logFiles" value="C:\\Users\\thinh.luong\\Katalon Studio\\automationPOC\\Reports\\20200512_165819\\New Test Suite\\20200512_165819\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="thinh.luong - lapdell-052.pyco.vn"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="katalonVersion" value="7.3.1.1"/>
+         <property name="browser" value="Chrome 81.0.4044.138"/>
+         <property name="hostAddress" value="172.16.190.106"/>
+         <property name="sessionId" value="b6f0fd6a143e7cb7f59e8c9f19e27548"/>
+         <property name="seleniumVersion" value="3.141.59"/>
+         <property name="proxyInformation" value="ProxyInformation{proxyOption=NO_PROXY, proxyServerType=HTTP, password=, proxyServerAddress=, proxyServerPort=0, executionList=}"/>
+         <property name="platform" value="Windows 10"/>
+      </properties>
+      <testcase name="Test Cases/Testcase1" time="14.834" classname="Test Cases/Testcase1" status="PASSED">
+         <system-out><![CDATA[2020-05-12 16:58:21 - [TEST_CASE][PASSED] - Test Cases/Testcase1: Test Cases/Testcase1
+
+2020-05-12 16:58:22 - [TEST_STEP][PASSED] - runFeatureFile("Include/features/Corporate/CreateCorporate.feature"): Feature file: 'Include/features/Corporate/CreateCorporate.feature' was passed
+
+2020-05-12 16:58:22 - [MESSAGE][INFO] - Starting run keyword runFeatureFile: 'Include/features/Corporate/CreateCorporate.feature' and extract report to folder: 'C:\Users\thinh.luong\Katalon Studio\automationPOC\Reports\20200512_165819\New Test Suite\20200512_165819/cucumber_report/1589277502261'...
+
+2020-05-12 16:58:22 - [TEST_CASE][PASSED] - Start Test Case : SCENARIO Create a Corporate: SCENARIO Create a Corporate
+
+2020-05-12 16:58:27 - [TEST_STEP][PASSED] - This user can access Operations page: This user can access Operations page
+
+2020-05-12 16:58:29 - [MESSAGE][PASSED] - Navigate to 'https://pycotest.tradeteq.com/operations/88c40ac6-1136-4e8f-94fb-a1aee76b3910/corporate/corporates-banks' successfully
+
+2020-05-12 16:58:29 - [MESSAGE][PASSED] - Wait for page load successfully
+
+2020-05-12 16:58:33 - [MESSAGE][PASSED] - Object 'Object Repository/LoginPage/emailAddresstxt' is visible
+
+2020-05-12 16:58:34 - [MESSAGE][PASSED] - Text 'automationpoc@yopmail.com' is set on object 'Object Repository/LoginPage/emailAddresstxt'
+
+2020-05-12 16:58:34 - [MESSAGE][PASSED] - Object 'Object Repository/LoginPage/passtxt' is visible
+
+2020-05-12 16:58:35 - [MESSAGE][PASSED] - Text '1qazZAQ!' is set on object 'Object Repository/LoginPage/passtxt'
+
+2020-05-12 16:58:35 - [MESSAGE][PASSED] - Object 'Object Repository/LoginPage/signInbtn' is visible
+
+2020-05-12 16:58:35 - [MESSAGE][PASSED] - Object 'Object Repository/LoginPage/signInbtn' is clickable
+
+2020-05-12 16:58:36 - [MESSAGE][PASSED] - Object: 'Object Repository/LoginPage/signInbtn' is clicked on
+
+2020-05-12 16:58:36 - [MESSAGE][PASSED] - Wait for page load successfully
+
+2020-05-12 16:58:36 - [MESSAGE][PASSED] - This user can access Operations page
+
+2020-05-12 16:58:36 - [MESSAGE][PASSED] - Feature file: 'Include/features/Corporate/CreateCorporate.feature' was passed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2020-05-12 16:58:21 - [TEST_SUITE][PASSED] - New Test Suite: Test Cases/Testcase1]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

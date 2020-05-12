@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="8.852894">
+<testcase classname="As an End User" name="Create a Corporate" time="8.852894">
+<failure message="java.lang.ClassNotFoundException: Object Repository/LoginPage&#13;&#10;&#9;at java_lang_ClassLoader$loadClass.call(Unknown Source)&#13;&#10;&#9;at base.BaseSteps.getPageObjectImplementation(BaseSteps.groovy:18)&#13;&#10;&#9;at base.BaseSteps.getPageObject(BaseSteps.groovy:26)&#13;&#10;&#9;at base.BaseSteps.getILoginPageObject(BaseSteps.groovy:33)&#13;&#10;&#9;at base.BaseSteps$getILoginPageObject.callCurrent(Unknown Source)&#13;&#10;&#9;at stepDefinitions.CreateCorporate.access_Operations_page(CreateCorporate.groovy:14)&#13;&#10;&#9;at ✽.This user can access Operations page(C:/Users/thinh.luong/Katalon Studio/automationPOC/Include/features/Corporate/CreateCorporate.feature:7)&#13;&#10;"><![CDATA[Given This user can access Operations page..................................failed
+
+StackTrace:
+java.lang.ClassNotFoundException: Object Repository/LoginPage
+	at java_lang_ClassLoader$loadClass.call(Unknown Source)
+	at base.BaseSteps.getPageObjectImplementation(BaseSteps.groovy:18)
+	at base.BaseSteps.getPageObject(BaseSteps.groovy:26)
+	at base.BaseSteps.getILoginPageObject(BaseSteps.groovy:33)
+	at base.BaseSteps$getILoginPageObject.callCurrent(Unknown Source)
+	at stepDefinitions.CreateCorporate.access_Operations_page(CreateCorporate.groovy:14)
+	at ✽.This user can access Operations page(C:/Users/thinh.luong/Katalon Studio/automationPOC/Include/features/Corporate/CreateCorporate.feature:7)
+]]></failure>
+</testcase>
+</testsuite>
