@@ -17,7 +17,7 @@ DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.c
 DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.windows.keyword.contribution.WindowsDriverCleaner())
 
 
-RunConfiguration.setExecutionSettingFile('C:\\Users\\THINH~1.LUO\\AppData\\Local\\Temp\\Katalon\\Include\\features\\Corporate\\CreateCorporate.feature\\20200512_190207\\execution.properties')
+RunConfiguration.setExecutionSettingFile('C:\\Users\\THINH~1.LUO\\AppData\\Local\\Temp\\Katalon\\Include\\features\\Corporate\\CreateCorporate.feature\\20200513_160130\\execution.properties')
 
 TestCaseMain.beforeStart()
 TestCaseMain.runFeatureFile('Include/features/Corporate/CreateCorporate.feature')

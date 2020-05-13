@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>REQUIRED_MSG_This field is required</name>
+   <name>msgIntCorporateID_Required</name>
    <tag></tag>
    <elementGuidId>b096c134-eef6-414c-b6b0-00251034a5f7</elementGuidId>
    <selectorCollection>

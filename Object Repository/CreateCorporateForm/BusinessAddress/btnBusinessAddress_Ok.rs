@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>dropBusinessAddress_Country</name>
+   <name>btnBusinessAddress_Ok</name>
    <tag></tag>
-   <elementGuidId>8806e280-8557-4a86-b427-721cf84bbe1a</elementGuidId>
+   <elementGuidId>060cbb2d-413d-4be5-9d95-559867bd52e1</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>input#mat-input-76</value>
+         <key>XPATH</key>
+         <value>//button[contains(text(),'Ok')]</value>
       </entry>
       <entry>
          <key>BASIC</key>
          <value></value>
       </entry>
    </selectorCollection>
-   <selectorMethod>CSS</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
 </WebElementEntity>

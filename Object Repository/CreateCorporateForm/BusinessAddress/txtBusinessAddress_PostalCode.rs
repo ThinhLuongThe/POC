@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>txtBusinessAddress_City</name>
+   <name>txtBusinessAddress_PostalCode</name>
    <tag></tag>
-   <elementGuidId>cd9e23e3-f38b-47b2-bfef-1e0d3ff05ed2</elementGuidId>
+   <elementGuidId>7aa1f7b3-25e8-4cbe-bcc8-e6855d2c7570</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//input[@id='mat-input-6']</value>
+         <value>//label[contains(text(),'Postal code')]/following-sibling::shared-input//input</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>input#mat-input-73</value>
+         <value>input#mat-input-71</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>CSS</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

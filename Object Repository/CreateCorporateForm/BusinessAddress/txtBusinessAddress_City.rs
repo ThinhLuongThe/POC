@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>txtCompanyRegistrationNumber</name>
+   <name>txtBusinessAddress_City</name>
    <tag></tag>
-   <elementGuidId>6a83d039-f431-4d10-bd58-3ea33b1203d9</elementGuidId>
+   <elementGuidId>cd9e23e3-f38b-47b2-bfef-1e0d3ff05ed2</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//label[@for='registrationNumber']/parent::div//input</value>
+         <value>//label[contains(text(),'City')]/following-sibling::shared-input//input</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>input#mat-input-5</value>
+         <value>input#mat-input-73</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

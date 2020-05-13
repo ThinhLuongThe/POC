@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>txtCompanyRegistrationNumber</name>
+   <name>txtBusinessAddress_Country_1st_item</name>
    <tag></tag>
-   <elementGuidId>6a83d039-f431-4d10-bd58-3ea33b1203d9</elementGuidId>
+   <elementGuidId>4ff26f46-9e39-4217-be33-f40a8cb5576a</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//label[@for='registrationNumber']/parent::div//input</value>
+         <value>//span[contains(text(),' Afghanistan ')]</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>input#mat-input-5</value>
+         <value>input#mat-input-71</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

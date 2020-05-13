@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>txtCompanyRegistrationNumber</name>
+   <name>txtBusinessAddress_Country</name>
    <tag></tag>
-   <elementGuidId>6a83d039-f431-4d10-bd58-3ea33b1203d9</elementGuidId>
+   <elementGuidId>55a8212a-18c0-4c67-9922-977a4fc57ae5</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//label[@for='registrationNumber']/parent::div//input</value>
+         <value>//label[contains(text(),'Country')]/following-sibling::shared-autocomplete-dropdown//input</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>input#mat-input-5</value>
+         <value>input#mat-input-71</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
