@@ -9,8 +9,8 @@ Feature: As an End User
     When User clicks on CREATE NEW CORPORATE button
     And User inputs all data
     And User clicks on CREATE button
-  #Then user sees detail page with inputted data
-  
+    Then User sees details page with input data
+
   @Testcase2 @ValidationMsg
   Scenario: Verify displaying the required error message "This field is required." when don't input data into "Internal corporate ID" field
     Given This user can access Operations page

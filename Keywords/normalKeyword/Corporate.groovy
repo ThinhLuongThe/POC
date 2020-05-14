@@ -29,9 +29,9 @@ public class Corporate {
 	
 	public Corporate (int range){
 		txtIntCorporateID = foo+rand.nextInt(range)
-		txtDUNSNumber = foo+rand.nextInt(range)
+		txtDUNSNumber = rand.nextInt(range)
 		txtLegalentityIdentifier = foo+rand.nextInt(range)
-		txtUKCompanyNumber = foo+rand.nextInt(range)
+		txtUKCompanyNumber = rand.nextInt(range)
 		txtACRA_UEN = foo+rand.nextInt(range)
 		txtName = foo+rand.nextInt(range)
 		txaSummaryDescription = foo+rand.nextInt(range)

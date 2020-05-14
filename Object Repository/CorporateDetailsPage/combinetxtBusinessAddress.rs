@@ -7,14 +7,14 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//input[@id='mat-input-6']</value>
+         <value>//span[contains(text(),'Business address')]/following-sibling::span</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>textarea#mat-input-1</value>
+         <value></value>
       </entry>
    </selectorCollection>
-   <selectorMethod>CSS</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

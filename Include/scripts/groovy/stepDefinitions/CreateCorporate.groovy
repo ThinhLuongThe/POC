@@ -10,6 +10,8 @@ import internal.GlobalVariable
 import normalKeyword.Corporate
 
 class CreateCorporate extends BaseSteps{
+	Corporate corporate = new Corporate(1000)
+
 	@Given("This user can access Operations page")
 	def access_Operations_page(){
 		browserkeyword.navigateToUrl(environment.getLoginPageURL())
@@ -30,7 +32,6 @@ class CreateCorporate extends BaseSteps{
 
 	@And("User inputs all data")
 	def input_all_data(){
-		Corporate corporate = new Corporate(1000)
 		//Main form
 		browserkeyword.inputText(findTestObject('Object Repository/CreateCorporateForm/txtIntCorporateID'), corporate.getTxtIntCorporateID())
 		browserkeyword.inputText(findTestObject('Object Repository/CreateCorporateForm/txtDUNSNumber'), corporate.getTxtDUNSNumber())
@@ -79,6 +80,26 @@ class CreateCorporate extends BaseSteps{
 		browserkeyword.clickElement(findTestObject('Object Repository/CreateCorporateForm/btnCreate'))
 	}
 
+	@Then("User sees details page with input data")
+	def details_page_with_input_data(){
+		browserkeyword.verifyElementText(findTestObject('Object Repository/CorporateDetailsPage/txtIntCorporateID'), corporate.getTxtIntCorporateID())
+		browserkeyword.verifyElementText(findTestObject('Object Repository/CorporateDetailsPage/txtDUNSNumber'), corporate.getTxtDUNSNumber())
+		browserkeyword.verifyElementText(findTestObject('Object Repository/CorporateDetailsPage/txtLegalentityIdentifier'), corporate.getTxtLegalentityIdentifier())
+		browserkeyword.verifyElementText(findTestObject('Object Repository/CorporateDetailsPage/txtUKCompanyNumber'), corporate.getTxtUKCompanyNumber())
+		browserkeyword.verifyElementText(findTestObject('Object Repository/CorporateDetailsPage/txtACRA_UEN'), corporate.getTxtACRA_UEN())
+
+		browserkeyword.verifyElementText(findTestObject('Object Repository/CorporateDetailsPage/txtPrivateName'), corporate.getTxtPrivateName())
+		browserkeyword.verifyElementText(findTestObject('Object Repository/CorporateDetailsPage/txtPrivateNameContact'), corporate.getTxtPrivateNameContact())
+		browserkeyword.verifyElementText(findTestObject('Object Repository/CorporateDetailsPage/txtPrivateEmailContact'), corporate.getTxtPrivateEmailContact())
+		browserkeyword.verifyElementText(findTestObject('Object Repository/CorporateDetailsPage/txtCompanyRegistrationNumber'), corporate.getTxtCompanyRegistrationNumber())
+		browserkeyword.verifyElementText(findTestObject('Object Repository/CorporateDetailsPage/combinetxtBusinessAddress'),
+				corporate.getTxtBusinessAddress_Add1()+", "
+				+corporate.getTxtBusinessAddress_Add2()+", "
+				+corporate.getTxtBusinessAddress_City()+", "
+				+corporate.getTxtBusinessAddress_Region()+", "
+				+corporate.getTxtBusinessAddress_PostalCode()+", "
+				+corporate.getTxtBusinessAddress_Country())
+	}
 
 	@And("User clicks on the Internal corporate ID field")
 	def click_Internal_corporate_ID_field(){

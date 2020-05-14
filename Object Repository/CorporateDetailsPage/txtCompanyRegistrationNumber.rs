@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//span[contains(text(),'Business address')]/following-sibling::span</value>
+         <value>//span[contains(text(),'Company registration number')]/following-sibling::span</value>
       </entry>
       <entry>
          <key>CSS</key>
