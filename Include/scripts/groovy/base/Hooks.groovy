@@ -4,7 +4,7 @@ package base
 import java.util.concurrent.TimeUnit
 
 import org.openqa.selenium.remote.DesiredCapabilities
-
+import org.openqa.selenium.remote.RemoteWebDriver
 import com.kms.katalon.core.model.FailureHandling
 import com.kms.katalon.core.webui.driver.DriverFactory
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
@@ -43,22 +43,25 @@ public class Hooks {
 		WebUI.openBrowser("")
 		WebUI.maximizeWindow()
 		WebUI.deleteAllCookies(FailureHandling.CONTINUE_ON_FAILURE)
-		
+
 		DesiredCapabilities caps = new DesiredCapabilities();
 		caps.setCapability("os", "Windows");
 		caps.setCapability("os_version", "10");
 		caps.setCapability("browser", "Chrome");
 		caps.setCapability("browser_version", "81");
 		caps.setCapability("name", "thinhdk1's First Test");
-		
+
 		GlobalVariable.driver = DriverFactory.getRemoteWebDriverServerUrl()
-//		GlobalVariable.driver = DriverFactory.getWebDriver()
+		//		GlobalVariable.driver = DriverFactory.getWebDriver()
+
+		//		RemoteWebDriver driver = (RemoteWebDriver)DriverFactory.getWebDriver()
+		//		GlobalVariable.driver = DriverFactory.getWebDriverServerUrl(driver)
 		// for async script
 		DriverFactory.getWebDriver().manage().timeouts().setScriptTimeout(30, TimeUnit.SECONDS)
 	}
 
 	@After
 	def teardownScenario() {
-		WebUI.closeBrowser()
+//		WebUI.closeBrowser()
 	}
 }

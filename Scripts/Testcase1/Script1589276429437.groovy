@@ -15,4 +15,4 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-CucumberKW.runFeatureFileWithTags('Include/features/Corporate/CreateCorporate.feature', '@Testcase1, @Testcase2')
+CucumberKW.runFeatureFileWithTags('Include/features/Corporate/CreateCorporate.feature', '@Testcase1')

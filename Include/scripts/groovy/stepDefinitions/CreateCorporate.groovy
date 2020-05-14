@@ -7,6 +7,7 @@ import cucumber.api.java.en.Given
 import cucumber.api.java.en.Then
 import cucumber.api.java.en.When
 import internal.GlobalVariable
+import normalKeyword.Corporate
 
 class CreateCorporate extends BaseSteps{
 	@Given("This user can access Operations page")
@@ -29,31 +30,50 @@ class CreateCorporate extends BaseSteps{
 
 	@And("User inputs all data")
 	def input_all_data(){
-		Random rand = new Random()
-		String CurrentTime = java.time.LocalTime.now()
+		Corporate corporate = new Corporate(1000)
 		//Main form
-		browserkeyword.inputText(findTestObject('Object Repository/CreateCorporateForm/txtIntCorporateID'), CurrentTime+rand.nextInt())
-		browserkeyword.inputText(findTestObject('Object Repository/CreateCorporateForm/txtDUNSNumber'), CurrentTime+rand.nextInt())
-		browserkeyword.inputText(findTestObject('Object Repository/CreateCorporateForm/txtLegalentityIdentifier'), CurrentTime+rand.nextInt())
-		browserkeyword.inputText(findTestObject('Object Repository/CreateCorporateForm/txtUKCompanyNumber'), CurrentTime+rand.nextInt())
-		browserkeyword.inputText(findTestObject('Object Repository/CreateCorporateForm/txtACRA_UEN'), CurrentTime+rand.nextInt())
-		browserkeyword.inputText(findTestObject('Object Repository/CreateCorporateForm/txtName'), CurrentTime+rand.nextInt())
-		browserkeyword.inputText(findTestObject('Object Repository/CreateCorporateForm/txaSummaryDescription'), CurrentTime+rand.nextInt())
-		browserkeyword.inputText(findTestObject('Object Repository/CreateCorporateForm/txtPrivateName'), CurrentTime+rand.nextInt())
-		browserkeyword.inputText(findTestObject('Object Repository/CreateCorporateForm/txtPrivateNameContact'), CurrentTime+rand.nextInt())
-		browserkeyword.inputText(findTestObject('Object Repository/CreateCorporateForm/txtPrivateEmailContact'), 'soul1@mailinator.com')
-		browserkeyword.inputText(findTestObject('Object Repository/CreateCorporateForm/txtCompanyRegistrationNumber'), String.valueOf(rand.nextInt(50)))
+		browserkeyword.inputText(findTestObject('Object Repository/CreateCorporateForm/txtIntCorporateID'), corporate.getTxtIntCorporateID())
+		browserkeyword.inputText(findTestObject('Object Repository/CreateCorporateForm/txtDUNSNumber'), corporate.getTxtDUNSNumber())
+		browserkeyword.inputText(findTestObject('Object Repository/CreateCorporateForm/txtLegalentityIdentifier'), corporate.getTxtLegalentityIdentifier())
+		browserkeyword.inputText(findTestObject('Object Repository/CreateCorporateForm/txtUKCompanyNumber'), corporate.getTxtUKCompanyNumber())
+		browserkeyword.inputText(findTestObject('Object Repository/CreateCorporateForm/txtACRA_UEN'), corporate.getTxtACRA_UEN())
+		browserkeyword.inputText(findTestObject('Object Repository/CreateCorporateForm/txtName'), corporate.getTxtName())
+		browserkeyword.inputText(findTestObject('Object Repository/CreateCorporateForm/txaSummaryDescription'), corporate.getTxaSummaryDescription())
+		//		Need execute in order of Corporate Rating
+		browserkeyword.clickElement(findTestObject('Object Repository/CreateCorporateForm/CorporateRating/selScale'))
+		corporate.setSelScale(browserkeyword.getTestObjectText(findTestObject('Object Repository/CreateCorporateForm/CorporateRating/selScale_1st_item')))
+		browserkeyword.clickElement(findTestObject('Object Repository/CreateCorporateForm/CorporateRating/selScale_1st_item'))
+		browserkeyword.clickElement(findTestObject('Object Repository/CreateCorporateForm/CorporateRating/selRating'))
+		corporate.setSelRating(browserkeyword.getTestObjectText(findTestObject('Object Repository/CreateCorporateForm/CorporateRating/selRating_1st_item')))
+		browserkeyword.clickElement(findTestObject('Object Repository/CreateCorporateForm/CorporateRating/selRating_1st_item'))
+		browserkeyword.inputText(findTestObject('Object Repository/CreateCorporateForm/txtInternalRating'), corporate.getTxtIntCorporateID())
+		//		Need execute in order of Sector Classification
+		browserkeyword.clickElement(findTestObject('Object Repository/CreateCorporateForm/SectorClassification/selSectorClassification'))
+		corporate.setSelSectorClassification(browserkeyword.getTestObjectText(findTestObject('Object Repository/CreateCorporateForm/SectorClassification/selSectorClassification_1st_item')))
+		browserkeyword.clickElement(findTestObject('Object Repository/CreateCorporateForm/SectorClassification/selSectorClassification_1st_item'))
+		browserkeyword.clickElement(findTestObject('Object Repository/CreateCorporateForm/SectorClassification/selIndustryGroup'))
+		corporate.setSelIndustryGroup(browserkeyword.getTestObjectText(findTestObject('Object Repository/CreateCorporateForm/SectorClassification/selIndustryGroup_1st_item')))
+		browserkeyword.clickElement(findTestObject('Object Repository/CreateCorporateForm/SectorClassification/selIndustryGroup_1st_item'))
+		//
+		browserkeyword.inputText(findTestObject('Object Repository/CreateCorporateForm/txtPrivateName'), corporate.getTxtPrivateName())
+		browserkeyword.inputText(findTestObject('Object Repository/CreateCorporateForm/txtPrivateNameContact'), corporate.getTxtPrivateNameContact())
+		browserkeyword.inputText(findTestObject('Object Repository/CreateCorporateForm/txtPrivateEmailContact'), corporate.getTxtPrivateEmailContact())
+		browserkeyword.inputText(findTestObject('Object Repository/CreateCorporateForm/txtCompanyRegistrationNumber'), String.valueOf(corporate.getTxtCompanyRegistrationNumber()))
 		//on BusinessAddress
 		browserkeyword.clickElement(findTestObject('Object Repository/CreateCorporateForm/BusinessAddress/btnBusinessAddress'))
 		browserkeyword.waitUntilElementVisible(findTestObject('Object Repository/CreateCorporateForm/BusinessAddress/txtBusinessAddress_Add1'))
-		browserkeyword.inputText(findTestObject('Object Repository/CreateCorporateForm/BusinessAddress/txtBusinessAddress_Add1'), CurrentTime+rand.nextInt())
-		browserkeyword.inputText(findTestObject('Object Repository/CreateCorporateForm/BusinessAddress/txtBusinessAddress_City'), CurrentTime+rand.nextInt())
+		browserkeyword.inputText(findTestObject('Object Repository/CreateCorporateForm/BusinessAddress/txtBusinessAddress_Add1'), corporate.getTxtBusinessAddress_Add1())
+		browserkeyword.inputText(findTestObject('Object Repository/CreateCorporateForm/BusinessAddress/txtBusinessAddress_Add2'), corporate.getTxtBusinessAddress_Add2())
+		browserkeyword.inputText(findTestObject('Object Repository/CreateCorporateForm/BusinessAddress/txtBusinessAddress_City'), corporate.getTxtBusinessAddress_City())
+		browserkeyword.inputText(findTestObject('Object Repository/CreateCorporateForm/BusinessAddress/txtBusinessAddress_Region'), corporate.getTxtBusinessAddress_Region())
+		browserkeyword.inputText(findTestObject('Object Repository/CreateCorporateForm/BusinessAddress/txtBusinessAddress_PostalCode'), corporate.getTxtBusinessAddress_PostalCode())
 		browserkeyword.clickElement(findTestObject('Object Repository/CreateCorporateForm/BusinessAddress/txtBusinessAddress_Country'))
+		corporate.setTxtBusinessAddress_Country(browserkeyword.getTestObjectText(findTestObject('Object Repository/CreateCorporateForm/BusinessAddress/txtBusinessAddress_Country_1st_item')))
 		browserkeyword.clickElement(findTestObject('Object Repository/CreateCorporateForm/BusinessAddress/txtBusinessAddress_Country_1st_item'))
 		//Back to Main form
 		browserkeyword.clickElement(findTestObject('Object Repository/CreateCorporateForm/BusinessAddress/btnBusinessAddress_Ok'))
 	}
-	
+
 	@And("User clicks on CREATE button")
 	def click_on_Create_button(){
 		browserkeyword.clickElement(findTestObject('Object Repository/CreateCorporateForm/btnCreate'))
