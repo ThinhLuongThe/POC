@@ -45,20 +45,20 @@ class CreateCorporate extends BaseSteps{
 			browserkeyword.inputText(getICorporateForm().getNamefield(), CorporateData.get("Name"))
 			browserkeyword.inputText(getICorporateForm().getSummaryDescriptionfield(), CorporateData.get("Summary description"))
 			//		Need execute in order of Corporate Rating
-			browserkeyword.clickElement(findTestObject('Object Repository/CreateCorporateForm/CorporateRating/selScale'))
-			corporate.setSelScale(browserkeyword.getTestObjectText(findTestObject('Object Repository/CreateCorporateForm/CorporateRating/selScale_1st_item')))
-			browserkeyword.clickElement(findTestObject('Object Repository/CreateCorporateForm/CorporateRating/selScale_1st_item'))
-			browserkeyword.clickElement(findTestObject('Object Repository/CreateCorporateForm/CorporateRating/selRating'))
-			corporate.setSelRating(browserkeyword.getTestObjectText(findTestObject('Object Repository/CreateCorporateForm/CorporateRating/selRating_1st_item')))
-			browserkeyword.clickElement(findTestObject('Object Repository/CreateCorporateForm/CorporateRating/selRating_1st_item'))
+			browserkeyword.clickElement(getICorporateForm().getCorporateScale())
+			corporate.setSelScale(browserkeyword.getTestObjectText(getICorporateForm().getCorporateScale_1stitem()))
+			browserkeyword.clickElement(getICorporateForm().getCorporateScale_1stitem())
+			browserkeyword.clickElement(getICorporateForm().getCorporateRating())
+			corporate.setSelRating(browserkeyword.getTestObjectText(getICorporateForm().getCorporateRating_1stitem()))
+			browserkeyword.clickElement(getICorporateForm().getCorporateRating_1stitem())
 			browserkeyword.inputText(getICorporateForm().getInternalRatingfield(), CorporateData.get("Internal rating"))
 			//		Need execute in order of Sector Classification
-			browserkeyword.clickElement(findTestObject('Object Repository/CreateCorporateForm/SectorClassification/selSectorClassification'))
-			corporate.setSelSectorClassification(browserkeyword.getTestObjectText(findTestObject('Object Repository/CreateCorporateForm/SectorClassification/selSectorClassification_1st_item')))
-			browserkeyword.clickElement(findTestObject('Object Repository/CreateCorporateForm/SectorClassification/selSectorClassification_1st_item'))
-			browserkeyword.clickElement(findTestObject('Object Repository/CreateCorporateForm/SectorClassification/selIndustryGroup'))
-			corporate.setSelIndustryGroup(browserkeyword.getTestObjectText(findTestObject('Object Repository/CreateCorporateForm/SectorClassification/selIndustryGroup_1st_item')))
-			browserkeyword.clickElement(findTestObject('Object Repository/CreateCorporateForm/SectorClassification/selIndustryGroup_1st_item'))
+			browserkeyword.clickElement(getICorporateForm().getSectorClassification())
+			corporate.setSelSectorClassification(browserkeyword.getTestObjectText(getICorporateForm().getSectorClassification_1stitem()))
+			browserkeyword.clickElement(getICorporateForm().getSectorClassification_1stitem())
+			browserkeyword.clickElement(getICorporateForm().getIndustryGroup())
+			corporate.setSelIndustryGroup(browserkeyword.getTestObjectText(getICorporateForm().getIndustryGroup_1stitem()))
+			browserkeyword.clickElement(getICorporateForm().getIndustryGroup_1stitem())
 			//
 			browserkeyword.inputText(getICorporateForm().getPrivateNamefield(), CorporateData.get("Private name"))
 			browserkeyword.inputText(getICorporateForm().getPrivateNameContactfield(), CorporateData.get("Primary name contact"))
@@ -86,7 +86,7 @@ class CreateCorporate extends BaseSteps{
 		List<Map<String,String>> AllBusinessAdd = dataTable.asMaps(String.class, String.class)
 		for (BusinessAdd in AllBusinessAdd) {
 			//on BusinessAddress
-			browserkeyword.clickElement(findTestObject('Object Repository/CreateCorporateForm/BusinessAddress/btnBusinessAddress'))
+			browserkeyword.clickElement(getICorporateForm().getBusinessAddressform())
 			browserkeyword.waitUntilElementVisible(getIBusinessAddressForm().getBAAddress1field())
 			browserkeyword.inputText(getIBusinessAddressForm().getBAAddress1field(), BusinessAdd.get("Address 1"))
 			browserkeyword.inputText(getIBusinessAddressForm().getBAAddress2field(), BusinessAdd.get("Address 2"))
@@ -98,6 +98,8 @@ class CreateCorporate extends BaseSteps{
 			browserkeyword.clickElement(getIBusinessAddressForm().getBACountry1stitem())
 			//Back to Main form
 			browserkeyword.clickElement(getIBusinessAddressForm().getBAOKbtn())
+			
+			
 			//Set to Global Variable to verify Corporate details
 			corporate.setTxtBusinessAddress_Add1(BusinessAdd.get("Address 1"))
 			corporate.setTxtBusinessAddress_Add2(BusinessAdd.get("Address 2"))
@@ -135,12 +137,12 @@ class CreateCorporate extends BaseSteps{
 
 	@And("User clicks on the Internal corporate ID field")
 	def click_Internal_corporate_ID_field(){
-		browserkeyword.clickElement(findTestObject('Object Repository/CreateCorporateForm/txtIntCorporateID'))
+		browserkeyword.clickElement(getICorporateForm().getIntCorporateIDfield())
 	}
 
 	@And("User does not input any data into this field and clicks other field")
 	def click_DUNS_Number_field(){
-		browserkeyword.clickElement(findTestObject('Object Repository/CreateCorporateForm/txtDUNSNumber'))
+		browserkeyword.clickElement(getICorporateForm().getDUNSNumberfield())
 	}
 
 	@Then("An error message is displayed for this field")

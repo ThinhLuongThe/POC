@@ -21,6 +21,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable
 
 public interface ICreateCorporateForm {
+	TestObject getBusinessAddressform()
 	TestObject getCancelbtn()
 	TestObject getCreatebtn()
 	TestObject getRequiredmsg()
@@ -36,4 +37,13 @@ public interface ICreateCorporateForm {
 	TestObject getPrivateNamefield()
 	TestObject getPrivateNameContactfield()
 	TestObject getUKCompanyNumberfield()
+	//Input fields
+	TestObject getCorporateScale()
+	TestObject getCorporateScale_1stitem()
+	TestObject getCorporateRating()
+	TestObject getCorporateRating_1stitem()
+	TestObject getSectorClassification()
+	TestObject getSectorClassification_1stitem()
+	TestObject getIndustryGroup()
+	TestObject getIndustryGroup_1stitem()
 }
