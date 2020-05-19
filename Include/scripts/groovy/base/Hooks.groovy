@@ -62,6 +62,6 @@ public class Hooks {
 
 	@After
 	def teardownScenario() {
-//		WebUI.closeBrowser()
+		WebUI.closeBrowser()
 	}
 }

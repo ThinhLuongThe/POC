@@ -11,6 +11,7 @@ public class Corporate {
 	String txtACRA_UEN
 	String txtName
 	String txaSummaryDescription
+	String txtInternalRating
 	String selScale
 	String selRating
 	String selSectorClassification
@@ -25,8 +26,8 @@ public class Corporate {
 	String txtBusinessAddress_Region
 	String txtBusinessAddress_PostalCode
 	String txtBusinessAddress_Country
-	
-	
+
+
 	public Corporate (int range){
 		txtIntCorporateID = foo+rand.nextInt(range)
 		txtDUNSNumber = rand.nextInt(range)
@@ -35,6 +36,7 @@ public class Corporate {
 		txtACRA_UEN = foo+rand.nextInt(range)
 		txtName = foo+rand.nextInt(range)
 		txaSummaryDescription = foo+rand.nextInt(range)
+		txtInternalRating = foo+rand.nextInt(range)
 		selScale
 		selRating
 		selSectorClassification

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>selScale_1st_item</name>
+   <name>selScale_1st_item - Text</name>
    <tag></tag>
-   <elementGuidId>723a3e42-5c58-44aa-86cf-b78fa8ef0163</elementGuidId>
+   <elementGuidId>544c6970-aa14-4d4a-b587-d7e1548186f9</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
@@ -17,6 +17,6 @@
          <value>div.mat-primary>mat-option:nth-of-type(2)</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>CSS</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
 </WebElementEntity>

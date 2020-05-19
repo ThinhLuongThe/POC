@@ -3,6 +3,9 @@ package base
 import browserkeyword.BrowserKeyword
 import browserkeyword.Environment
 import browserkeyword.IBrowserKeywords
+import interfacePageObject.ICorporateDetails
+import interfacePageObject.ICreateBusinessAddressForm
+import interfacePageObject.ICreateCorporateForm
 import interfacePageObject.ILoginPage
 
 public class BaseSteps {
@@ -32,5 +35,16 @@ public class BaseSteps {
 	public ILoginPage getILoginPageObject(){
 		return getPageObject('pageObject.LoginPage')
 	}
+
+	public ICreateCorporateForm getICorporateForm(){
+		return getPageObject('pageObject.CreateCorporateForm')
+	}
 	
+	public ICorporateDetails getICorporateDetails(){
+		return getPageObject('pageObject.CorporateDetails')
+	}
+
+	public ICreateBusinessAddressForm getIBusinessAddressForm(){
+		return getPageObject('pageObject.CreateBusinessAddressForm')
+	}
 }

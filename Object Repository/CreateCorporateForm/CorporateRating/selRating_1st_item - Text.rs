@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>selScale_1st_item</name>
+   <name>selRating_1st_item - Text</name>
    <tag></tag>
-   <elementGuidId>723a3e42-5c58-44aa-86cf-b78fa8ef0163</elementGuidId>
+   <elementGuidId>514d05ff-8ae5-49e9-8478-c5ff8b448e53</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//span[contains(text(),' S&amp;P ')]</value>
+         <value>//span[contains(text(),' AAA ')]</value>
       </entry>
       <entry>
          <key>CSS</key>
          <value>div.mat-primary>mat-option:nth-of-type(2)</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>CSS</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
 </WebElementEntity>

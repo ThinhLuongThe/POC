@@ -20,20 +20,14 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 
 import internal.GlobalVariable
 
-public interface ICreateCorporateForm {
-	TestObject getCancelbtn()
-	TestObject getCreatebtn()
-	TestObject getRequiredmsg()
-	TestObject getSummaryDescriptionfield()
-	TestObject getACRA_UENfield()
-	TestObject getCompanyRegistrationNumberfield()
-	TestObject getDUNSNumberfield()
-	TestObject getIntCorporateIDfield()
-	TestObject getInternalRatingfield()
-	TestObject getLegalentityIdentifierfield()
-	TestObject getNamefield()
-	TestObject getPrivateEmailContactfield()
-	TestObject getPrivateNamefield()
-	TestObject getPrivateNameContactfield()
-	TestObject getUKCompanyNumberfield()
+public interface ICreateBusinessAddressForm {
+	TestObject getBACancelbtn()
+	TestObject getBAOKbtn()
+	TestObject getBAAddress1field()
+	TestObject getBAAddress2field()
+	TestObject getBACityfield()
+	TestObject getBACountrylist()
+	TestObject getBACountry1stitem()
+	TestObject getBAPostalCodefield()
+	TestObject getBARegionfield()
 }
