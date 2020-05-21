@@ -43,6 +43,11 @@ import helper.WaitHelper
 import org.openqa.selenium.WebDriverException
 
 public class BrowserKeyword extends AbstractKeyword implements IBrowserKeywords {
+	@Override
+	public void hoverOn(TestObject object){
+		WebUI.waitForElementVisible(object, getTimeOut())
+		WebUI.mouseOver(object)
+	}
 
 	@Override
 	public void clickElement(TestObject object) {
@@ -56,7 +61,7 @@ public class BrowserKeyword extends AbstractKeyword implements IBrowserKeywords 
 	public void inputText(TestObject object, String text){
 		waitUntilWebElementVisible(object)
 		WebUI.setText(object, text)
-//		Mobile.hideKeyboard();
+		//		Mobile.hideKeyboard();
 	}
 
 	@Override

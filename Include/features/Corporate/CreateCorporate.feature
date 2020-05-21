@@ -2,9 +2,12 @@
 Feature: As an End User
   I want to create a Corporate information
 
+  Background: 
+    Given User logins to Homepage
+
   @Testcase1 @Create
   Scenario: Verify that Originator can create the new Corporate successfully
-    Given This user can access Operations page
+    And This user can access Operations page
     And User belongs to company that it is set Originator
     When User clicks on CREATE NEW CORPORATE button
     And User inputs all data for Corporate
@@ -16,10 +19,9 @@ Feature: As an End User
     And User clicks on CREATE button
     Then User sees details page with input data
 
-
   @Testcase2 @ValidationMsg
   Scenario: Verify displaying the required error message "This field is required." when don't input data into "Internal corporate ID" field
-    Given This user can access Operations page
+    And This user can access Operations page
     And User belongs to company that it is set Originator
     When User clicks on CREATE NEW CORPORATE button
     And User clicks on the Internal corporate ID field
@@ -27,3 +29,19 @@ Feature: As an End User
     Then An error message is displayed for this field
       | error message           |
       | This field is required. |
+
+  @Testcase3 @NavigateMenus_SubMenus
+  Scenario: Verify that user can navigate some pages when clicking on Main and Sub menu of Left Menu
+    When User clicks on the list of Main and Sub menu then assert the Text in Page correctly
+      | Menu              | Assertion          |
+      | Marketplace       | Marketplace        |
+      | Create deal       | Create a deal      |
+      | Operations        | Corporates / Banks |
+      | Import corporates | Import corporates  |
+
+  @Testcase4 @NavigateMenus_SubMenus
+  Scenario: Verify that user can navigate some pages when hovering and clicking on Main and Sub menu of Left Menu
+    When User hovers on the list of Main and clicks on the list of Sub-menu then assert the Text in Page correctly
+      | Menu       | Submenu                  | Assertion                                   |
+      | Trade      | Manage letters of credit | Letters of Credit - Participation Agreement |
+      | My Company | Automation POC profile   | Company info                                |

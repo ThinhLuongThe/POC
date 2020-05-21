@@ -3,10 +3,8 @@ package browserkeyword
 import internal.GlobalVariable
 
 public class Environment {
-
 	private String EnvironmentUrl;
-
-	private String LoginpageUrl = "operations/88c40ac6-1136-4e8f-94fb-a1aee76b3910/corporate/corporates-banks"
+	private String CorporateBanksUrl = "operations/88c40ac6-1136-4e8f-94fb-a1aee76b3910/corporate/corporates-banks"
 
 	public static Environment init() {
 		new Environment()
@@ -16,8 +14,11 @@ public class Environment {
 		EnvironmentUrl  = GlobalVariable.baseUrl
 	}
 
+	public String getBasePage(){
+		return EnvironmentUrl;
+	}
 
-	public String getLoginPageURL() {
-		return EnvironmentUrl + LoginpageUrl
+	public String getCorporateBankPage() {
+		return EnvironmentUrl + CorporateBanksUrl
 	}
 }

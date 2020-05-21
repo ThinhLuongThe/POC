@@ -1,5 +1,8 @@
 package base
 
+import com.kms.katalon.core.testobject.TestObject
+import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
+
 import browserkeyword.BrowserKeyword
 import browserkeyword.Environment
 import browserkeyword.IBrowserKeywords
@@ -39,12 +42,28 @@ public class BaseSteps {
 	public ICreateCorporateForm getICorporateForm(){
 		return getPageObject('pageObject.CreateCorporateForm')
 	}
-	
+
 	public ICorporateDetails getICorporateDetails(){
 		return getPageObject('pageObject.CorporateDetails')
 	}
 
 	public ICreateBusinessAddressForm getIBusinessAddressForm(){
 		return getPageObject('pageObject.CreateBusinessAddressForm')
+	}
+
+	protected TestObject getMenu(String menuName){
+		return findTestObject('Object Repository/MenuObjects', ["MenuName":menuName])
+	}
+	
+	protected TestObject getSubmenuHoverbyName(String submenuName){
+		return findTestObject('Object Repository/SubmenuObjects_Hover', ["SubmenuName":submenuName])
+	}
+	
+	protected TestObject getSubmenuHoverbyLink(String submenuLink){
+		return findTestObject('Object Repository/SubmenuObjects_Hover', ["SubmenuLink":submenuLink])
+	}
+	
+	protected TestObject getaText(String text){
+		return findTestObject('Object Repository/TextObjects', ["Text":text])
 	}
 }

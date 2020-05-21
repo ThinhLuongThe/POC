@@ -14,12 +14,18 @@ import normalKeyword.Corporate
 class CreateCorporate extends BaseSteps{
 	Corporate corporate = new Corporate(1000)
 
-	@Given("This user can access Operations page")
-	def access_Operations_page(){
-		browserkeyword.navigateToUrl(environment.getLoginPageURL())
+	@Given("User logins to Homepage")
+	def login_to_Homepage(){
+		browserkeyword.navigateToUrl(environment.getBasePage())
 		browserkeyword.inputText(getILoginPageObject().getEmailfield(), GlobalVariable.email)
 		browserkeyword.inputText(getILoginPageObject().getPassfield(), GlobalVariable.pass)
 		browserkeyword.clickElement(getILoginPageObject().getSignbutton())
+	}
+
+	@And("This user can access Operations page")
+	def access_Operations_page(){
+		browserkeyword.hoverOn(getMenu('Operations'))
+		browserkeyword.clickElement(getSubmenuHoverbyName('Corporates/Banks'))
 	}
 
 	@And("User belongs to company that it is set Originator")
@@ -64,9 +70,9 @@ class CreateCorporate extends BaseSteps{
 			browserkeyword.inputText(getICorporateForm().getPrivateNameContactfield(), CorporateData.get("Primary name contact"))
 			browserkeyword.inputText(getICorporateForm().getPrivateEmailContactfield(), CorporateData.get("Primary email contact"))
 			browserkeyword.inputText(getICorporateForm().getCompanyRegistrationNumberfield(), String.valueOf(CorporateData.get("Company registration number")))
-			
-			
-			
+
+
+
 			//Set to Global Variable to verify Corporate details
 			corporate.setTxtDUNSNumber(CorporateData.get("DUNS number"))
 			corporate.setTxtLegalentityIdentifier(CorporateData.get("Legal entity identifier"))
@@ -98,8 +104,8 @@ class CreateCorporate extends BaseSteps{
 			browserkeyword.clickElement(getIBusinessAddressForm().getBACountry1stitem())
 			//Back to Main form
 			browserkeyword.clickElement(getIBusinessAddressForm().getBAOKbtn())
-			
-			
+
+
 			//Set to Global Variable to verify Corporate details
 			corporate.setTxtBusinessAddress_Add1(BusinessAdd.get("Address 1"))
 			corporate.setTxtBusinessAddress_Add2(BusinessAdd.get("Address 2"))
@@ -150,6 +156,27 @@ class CreateCorporate extends BaseSteps{
 		List<Map<String,String>> errorMsgs = dataTable.asMaps(String.class, String.class)
 		for (errorMsg in errorMsgs) {
 			browserkeyword.verifyElementText(findTestObject('Object Repository/CreateCorporateForm/msgIntCorporateID_Required'), errorMsg.get("error message"))
+		}
+	}
+	
+	//Testcase3
+	@When("User clicks on the list of Main and Sub menu then assert the Text in Page correctly")
+	def access_to_menu(DataTable dataTable){
+		List<Map<String,String>> menuNames = dataTable.asMaps(String.class, String.class)
+		for (menuName in menuNames){
+		browserkeyword.clickElement(getMenu(menuName.get("Menu")))
+		browserkeyword.verifyElementIsVisible(getaText(menuName.get("Assertion")))
+		}
+	}
+	
+	//Testcase4
+	@When("User hovers on the list of Main and clicks on the list of Sub-menu then assert the Text in Page correctly")
+	def hover_on_menu_and_click_submenu(DataTable dataTable){
+		List<Map<String,String>> targetMenus = dataTable.asMaps(String.class, String.class)
+		for (targetMenu in targetMenus){
+			browserkeyword.hoverOn(getMenu(targetMenu.get("Menu")))
+			browserkeyword.clickElement(getSubmenuHoverbyName(targetMenu.get("Submenu")))
+			browserkeyword.verifyElementIsVisible(getaText(targetMenu.get("Assertion")))
 		}
 	}
 }

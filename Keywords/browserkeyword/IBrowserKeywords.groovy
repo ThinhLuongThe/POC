@@ -1,9 +1,12 @@
 package browserkeyword
 
-import com.kms.katalon.core.testobject.TestObject
 import org.openqa.selenium.By
 
+import com.kms.katalon.core.testobject.TestObject
+
 public interface IBrowserKeywords {
+	void hoverOn(TestObject object)
+	
 	void clickElement(TestObject object);
 
 	void inputText(TestObject object, String text);
