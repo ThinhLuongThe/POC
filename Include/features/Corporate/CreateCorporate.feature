@@ -33,15 +33,23 @@ Feature: As an End User
   @Testcase3 @NavigateMenus_SubMenus
   Scenario: Verify that user can navigate some pages when clicking on Main and Sub menu of Left Menu
     When User clicks on the list of Main and Sub menu then assert the Text in Page correctly
-      | Menu              | Assertion          |
-      | Marketplace       | Marketplace        |
-      | Create deal       | Create a deal      |
-      | Operations        | Corporates / Banks |
-      | Import corporates | Import corporates  |
+      #| Menu              | Assertion          |
+      #| Marketplace       | Marketplace        |
+      #| Create deal       | Create a deal      |
+      #| Operations        | Corporates / Banks |
+      #| Import corporates | Import corporates  |
+      | MenuLink                                                                     | Assertion          |
+      | /deals                                                                       | Marketplace        |
+      | /deals/create                                                                | Create a deal      |
+      | /operations/88c40ac6-1136-4e8f-94fb-a1aee76b3910/corporate/corporates-banks  | Corporates / Banks |
+      | /operations/88c40ac6-1136-4e8f-94fb-a1aee76b3910/corporate/import-corporates | Import corporates  |
 
   @Testcase4 @NavigateMenus_SubMenus
   Scenario: Verify that user can navigate some pages when hovering and clicking on Main and Sub menu of Left Menu
     When User hovers on the list of Main and clicks on the list of Sub-menu then assert the Text in Page correctly
-      | Menu       | Submenu                  | Assertion                                   |
-      | Trade      | Manage letters of credit | Letters of Credit - Participation Agreement |
-      | My Company | Automation POC profile   | Company info                                |
+      #| Menu       | Submenu                  | Assertion                                   |
+      #| Trade      | Manage letters of credit | Letters of Credit - Participation Agreement |
+      #| My Company | Automation POC profile   | Company info                                |
+      | MenuLink                                           | Submenu                  | Assertion                                   |
+      | /manage-receivables                                | Manage letters of credit | Letters of Credit - Participation Agreement |
+      | /company/88c40ac6-1136-4e8f-94fb-a1aee76b3910/view | Automation POC profile   | Company info                                |

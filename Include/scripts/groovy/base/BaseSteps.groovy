@@ -55,6 +55,10 @@ public class BaseSteps {
 		return findTestObject('Object Repository/MenuObjects', ["MenuName":menuName])
 	}
 	
+	protected TestObject getMenubyLink(String menuLink){
+		return findTestObject('Object Repository/MenuObjects', ["MenuLink":menuLink])
+	}
+	
 	protected TestObject getSubmenuHoverbyName(String submenuName){
 		return findTestObject('Object Repository/SubmenuObjects_Hover', ["SubmenuName":submenuName])
 	}

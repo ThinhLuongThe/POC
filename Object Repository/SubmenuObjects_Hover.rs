@@ -6,16 +6,15 @@
    <elementGuidId>b3d0b142-03b1-40b1-8d8c-e754f3e2db04</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>a[href='${SubmenuLink}']</value>
+         <key>BASIC</key>
       </entry>
       <entry>
          <key>XPATH</key>
          <value>//li/a[contains(text(),'${SubmenuName}')]</value>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>CSS</key>
+         <value>a[href='${SubmenuLink}']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

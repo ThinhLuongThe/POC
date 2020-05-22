@@ -24,7 +24,9 @@ class CreateCorporate extends BaseSteps{
 
 	@And("This user can access Operations page")
 	def access_Operations_page(){
-		browserkeyword.hoverOn(getMenu('Operations'))
+//		browserkeyword.hoverOn(getMenu('Operations'))
+//		browserkeyword.clickElement(getSubmenuHoverbyName('Corporates/Banks'))
+		browserkeyword.hoverOn(getMenubyLink('/operations/88c40ac6-1136-4e8f-94fb-a1aee76b3910/corporate/corporates-banks'))
 		browserkeyword.clickElement(getSubmenuHoverbyName('Corporates/Banks'))
 	}
 
@@ -158,23 +160,34 @@ class CreateCorporate extends BaseSteps{
 			browserkeyword.verifyElementText(findTestObject('Object Repository/CreateCorporateForm/msgIntCorporateID_Required'), errorMsg.get("error message"))
 		}
 	}
-	
+
 	//Testcase3
 	@When("User clicks on the list of Main and Sub menu then assert the Text in Page correctly")
 	def access_to_menu(DataTable dataTable){
-		List<Map<String,String>> menuNames = dataTable.asMaps(String.class, String.class)
-		for (menuName in menuNames){
-		browserkeyword.clickElement(getMenu(menuName.get("Menu")))
-		browserkeyword.verifyElementIsVisible(getaText(menuName.get("Assertion")))
+		//		List<Map<String,String>> menuNames = dataTable.asMaps(String.class, String.class)
+		//		for (menuName in menuNames){
+		//		browserkeyword.clickElement(getMenu(menuName.get("Menu")))
+		//		browserkeyword.verifyElementIsVisible(getaText(menuName.get("Assertion")))
+		//		}
+		List<Map<String,String>> menuLinks = dataTable.asMaps(String.class, String.class)
+		for (menuLink in menuLinks){
+			browserkeyword.clickElement(getMenubyLink(menuLink.get("MenuLink")))
+			browserkeyword.verifyElementIsVisible(getaText(menuLink.get("Assertion")))
 		}
 	}
-	
+
 	//Testcase4
 	@When("User hovers on the list of Main and clicks on the list of Sub-menu then assert the Text in Page correctly")
 	def hover_on_menu_and_click_submenu(DataTable dataTable){
+		//		List<Map<String,String>> targetMenus = dataTable.asMaps(String.class, String.class)
+		//		for (targetMenu in targetMenus){
+		//			browserkeyword.hoverOn(getMenu(targetMenu.get("Menu")))
+		//			browserkeyword.clickElement(getSubmenuHoverbyName(targetMenu.get("Submenu")))
+		//			browserkeyword.verifyElementIsVisible(getaText(targetMenu.get("Assertion")))
+		//		}
 		List<Map<String,String>> targetMenus = dataTable.asMaps(String.class, String.class)
 		for (targetMenu in targetMenus){
-			browserkeyword.hoverOn(getMenu(targetMenu.get("Menu")))
+			browserkeyword.hoverOn(getMenubyLink(targetMenu.get("MenuLink")))
 			browserkeyword.clickElement(getSubmenuHoverbyName(targetMenu.get("Submenu")))
 			browserkeyword.verifyElementIsVisible(getaText(targetMenu.get("Assertion")))
 		}
